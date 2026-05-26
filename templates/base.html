@@ -4,42 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Business Brochure{% endblock %}</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        // Basic Tailwind configuration
+        tailwind.config = {
+            content: [],
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+    
     <style>
-        /* Simple navbar styling for now */
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
-        nav {
-            background-color: #333;
-            padding: 1rem;
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+        body {
+            font-family: 'Inter', system_ui, sans-serif;
         }
-        nav ul {
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            gap: 2rem;
-        }
-        nav a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-        }
-        nav a:hover { color: #ddd; }
-        .container { padding: 2rem; }
     </style>
 </head>
-<body>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about/">About</a></li>
-            <li><a href="/services/">Services</a></li>
-            <li><a href="/contact/">Contact</a></li>
-        </ul>
+<body class="bg-zinc-50 text-zinc-900">
+    
+    <!-- Navbar -->
+    <nav class="bg-zinc-900 text-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
+            <a href="/" class="text-2xl font-semibold tracking-tight">Your Business</a>
+            
+            <div class="flex items-center gap-x-8 text-sm font-medium">
+                <a href="/" class="hover:text-sky-400 transition">Home</a>
+                <a href="/about/" class="hover:text-sky-400 transition">About</a>
+                <a href="/services/" class="hover:text-sky-400 transition">Services</a>
+                <a href="/contact/" class="hover:text-sky-400 transition">Contact</a>
+            </div>
+        </div>
     </nav>
 
-    <div class="container">
+    <!-- Page Content -->
+    <main>
         {% block content %}
         {% endblock %}
-    </div>
+    </main>
+
 </body>
 </html>

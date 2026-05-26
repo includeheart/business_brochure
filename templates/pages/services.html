@@ -11,8 +11,24 @@
 {% block title %}Services{% endblock %}
 
 {% block content %}
-    <h1>Our Services</h1>
-    <p>List the services you offer here.</p>
+    <div class="max-w-7xl mx-auto px-6 py-16">
+        <h1 class="text-5xl font-semibold tracking-tight mb-12 text-center">Our Services</h1>
+        
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-zinc-100">
+                <h3 class="text-2xl font-semibold mb-4">Service One</h3>
+                <p class="text-zinc-600">Description of your first service goes here.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-zinc-100">
+                <h3 class="text-2xl font-semibold mb-4">Service Two</h3>
+                <p class="text-zinc-600">Description of your second service goes here.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl shadow-sm border border-zinc-100">
+                <h3 class="text-2xl font-semibold mb-4">Service Three</h3>
+                <p class="text-zinc-600">Description of your third service goes here.</p>
+            </div>
+        </div>
+    </div>
 {% endblock %}
 </body>
 </html>
