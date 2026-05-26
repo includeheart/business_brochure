@@ -6,7 +6,13 @@
     <title>Home - Your Business</title>
 </head>
 <body>
-    <h1>Welcome to My Business Brochure</h1>
-    <p>This is the homepage. Django is working!</p>
+{% extends 'base.html' %}
+
+{% block title %}Home - Your Business{% endblock %}
+
+{% block content %}
+    <h1>Welcome to My Business</h1>
+    <p>This is the homepage of your professional brochure website.</p>
+{% endblock %}
 </body>
 </html>
