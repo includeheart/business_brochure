@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+/* Scan all Django templates */
+@source "../../templates/**/*.html";
+@source "../../**/*.html";           /* broader fallback - catches everything */

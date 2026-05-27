@@ -1,35 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}Business Brochure{% endblock %}</title>
-    
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.tailwindcss.com"></script>
-    
-    <script>
-        // Basic Tailwind configuration
-        tailwind.config = {
-            content: [],
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#0f172a',
-                    }
-                }
-            }
-        }
-    </script>
-    
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
-        body {
-            font-family: 'Inter', system_ui, sans-serif;
-        }
-    </style>
+    <link rel="stylesheet" href="{% static 'css/output.css' %}">
 </head>
-<body class="bg-zinc-50 text-zinc-900">
+<body class="bg-zinc-50 text-zinc-900 flex flex-col min-h-screen">
     
     <!-- Navbar -->
     <nav class="bg-zinc-900 text-white sticky top-0 z-50">
@@ -46,10 +24,60 @@
     </nav>
 
     <!-- Page Content -->
-    <main>
+    <main class="flex-1">
         {% block content %}
         {% endblock %}
     </main>
+
+    <!-- Footer -->
+    <footer class="bg-zinc-900 text-zinc-400 mt-auto">
+        <div class="max-w-7xl mx-auto px-6 py-12">
+            <div class="grid md:grid-cols-4 gap-8">
+                
+                <!-- Column 1: Brand -->
+                <div>
+                    <h3 class="text-white text-2xl font-semibold tracking-tight mb-4">Your Business</h3>
+                    <p class="text-sm">Your tagline here.</p>
+                </div>
+                <!-- Column 2: Quick Links -->
+                <div>
+                    <h4 class="text-white font-medium mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="/" class="hover:text-white transition">Home</a></li>
+                        <li><a href="/about/" class="hover:text-white transition">About</a></li>
+                        <li><a href="/services/" class="hover:text-white transition">Services</a></li>
+                        <li><a href="/contact/" class="hover:text-white transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Company -->
+                <div>
+                    <h4 class="text-white font-medium mb-4">Company</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition">Our Story</a></li>
+                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Legal -->
+                <div>
+                    <h4 class="text-white font-medium mb-4">Legal</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition">Cookie Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="border-t border-zinc-800 mt-12 pt-8 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
+                <p>&copy; 2026 Your Business. All rights reserved.</p>
+                <p class="text-zinc-500">Built with Django + Tailwind</p>
+            </div>
+        </div>
+    </footer>
 
 </body>
 </html>
