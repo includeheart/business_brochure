@@ -4,26 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}Business Brochure{% endblock %}</title>
+    <title>{% block title %}Your Business{% endblock %}</title>
     <link rel="stylesheet" href="{% static 'css/output.css' %}">
 </head>
 <body class="bg-zinc-50 text-zinc-900 flex flex-col min-h-screen">
-    
+
     <!-- Navbar -->
     <nav class="bg-zinc-900 text-white sticky top-0 z-50">
         <div class="max-w-7xl mx-auto px-6 py-5 flex items-center justify-between">
             <a href="/" class="text-2xl font-semibold tracking-tight">Your Business</a>
             
             <div class="flex items-center gap-x-8 text-sm font-medium">
-                <a href="/" class="hover:text-sky-400 transition">Home</a>
-                <a href="/about/" class="hover:text-sky-400 transition">About</a>
-                <a href="/services/" class="hover:text-sky-400 transition">Services</a>
-                <a href="/contact/" class="hover:text-sky-400 transition">Contact</a>
+                <a href="/" class="hover:text-sky-400 transition-colors">Home</a>
+                <a href="/about/" class="hover:text-sky-400 transition-colors">About</a>
+                <a href="/services/" class="hover:text-sky-400 transition-colors">Services</a>
+                <a href="/contact/" class="hover:text-sky-400 transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Page Content -->
+    <!-- Main Content -->
     <main class="flex-1">
         {% block content %}
         {% endblock %}
@@ -33,51 +33,57 @@
     <footer class="bg-zinc-900 text-zinc-400 mt-auto">
         <div class="max-w-7xl mx-auto px-6 py-12">
             <div class="grid md:grid-cols-4 gap-8">
-                
-                <!-- Column 1: Brand -->
+                <!-- Brand -->
                 <div>
                     <h3 class="text-white text-2xl font-semibold tracking-tight mb-4">Your Business</h3>
-                    <p class="text-sm">Your tagline here.</p>
+                    <p class="text-sm">Professional solutions with a personal touch.</p>
+                    
+                    <!-- Social Icons -->
+                    <div class="flex gap-5 mt-6">
+                        <a href="#" target="_blank" class="hover:text-white transition-colors">FB</a>
+                        <a href="#" target="_blank" class="hover:text-white transition-colors">X</a>
+                        <a href="#" target="_blank" class="hover:text-white transition-colors">IG</a>
+                        <a href="https://github.com/includeheart" target="_blank" class="hover:text-white transition-colors">GitHub</a>
+                    </div>
                 </div>
-                <!-- Column 2: Quick Links -->
+
+                <!-- Quick Links -->
                 <div>
                     <h4 class="text-white font-medium mb-4">Quick Links</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="/" class="hover:text-white transition">Home</a></li>
-                        <li><a href="/about/" class="hover:text-white transition">About</a></li>
-                        <li><a href="/services/" class="hover:text-white transition">Services</a></li>
-                        <li><a href="/contact/" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
+                        <li><a href="/about/" class="hover:text-white transition-colors">About</a></li>
+                        <li><a href="/services/" class="hover:text-white transition-colors">Services</a></li>
+                        <li><a href="/contact/" class="hover:text-white transition-colors">Contact</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 3: Company -->
+                <!-- Company -->
                 <div>
                     <h4 class="text-white font-medium mb-4">Company</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white transition">Careers</a></li>
-                        <li><a href="#" class="hover:text-white transition">Our Story</a></li>
-                        <li><a href="#" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Careers</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Our Story</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Blog</a></li>
                     </ul>
                 </div>
 
-                <!-- Column 4: Legal -->
+                <!-- Legal -->
                 <div>
                     <h4 class="text-white font-medium mb-4">Legal</h4>
                     <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
-                        <li><a href="#" class="hover:text-white transition">Cookie Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Privacy Policy</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Terms of Service</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Cookie Policy</a></li>
                     </ul>
                 </div>
             </div>
 
-            <!-- Bottom bar -->
             <div class="border-t border-zinc-800 mt-12 pt-8 text-xs flex flex-col md:flex-row justify-between items-center gap-4">
                 <p>&copy; 2026 Your Business. All rights reserved.</p>
                 <p class="text-zinc-500">Built with Django + Tailwind</p>
             </div>
         </div>
     </footer>
-
 </body>
 </html>

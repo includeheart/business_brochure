@@ -3,24 +3,29 @@
 {% block title %}Home - Your Business{% endblock %}
 
 {% block content %}
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="bg-gradient-to-r from-zinc-900 to-sky-900 text-white py-24">
         <div class="max-w-4xl mx-auto text-center px-6">
-            <h1 class="text-6xl font-semibold tracking-tight mb-6">
+            <h1 class="text-6xl md:text-7xl font-semibold tracking-tight mb-6">
                 Your Business Name
             </h1>
-            <p class="text-xl text-zinc-300 mb-10">
-                Professional solutions with a personal touch.
+            <p class="text-xl md:text-2xl text-zinc-300 mb-10 max-w-2xl mx-auto">
+                Your company slogan here!
             </p>
             <a href="/contact/" 
-               class="inline-block bg-white text-zinc-900 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-sky-400 hover:text-white transition">
+               class="inline-block bg-white text-zinc-900 px-8 py-4 rounded-2xl font-semibold text-lg hover:bg-sky-400 hover:text-white transition-colors">
                 Get In Touch
             </a>
         </div>
     </section>
 
-    <div class="max-w-7xl mx-auto px-6 py-16">
-        <p class="text-center text-2xl font-semibold mb-4">Describe your business!</p>
-        <p class="text-center text-zinc-600">Lorem ipsum dolor sit amet consectetur adipiscing elit...</p>
+    <!-- Intro Section -->
+    <div class="max-w-7xl mx-auto px-6 py-20">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-semibold tracking-tight mb-6">Welcome to Your Business</h2>
+            <p class="text-lg text-zinc-600 leading-relaxed">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+        </div>
     </div>
 {% endblock %}
